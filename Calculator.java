@@ -1,6 +1,6 @@
-public class Calculator {
+public double addition(double a, double b) {
+return b + a; 3 
+} 
+ 
 
-public static void main(String[] args) {}
 
-
-}
