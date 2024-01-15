@@ -1,0 +1,684 @@
+CH3:
+PS C:\Users\Sümeyye ALPARSLAN\Desktop> git --version
+git version 2.42.0.windows.2
+PS C:\Users\Sümeyye ALPARSLAN\Desktop> git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=input
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=main
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+filter.lfs.clean=git-lfs clean -- %f
+user.name=sumeyyealparslan
+user.email=sumalparslann@gmail.com
+PS C:\Users\Sümeyye ALPARSLAN\Desktop> git config --list --show-origin
+file:C:/Program Files/Git/etc/gitconfig diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig core.autocrlf=input
+file:C:/Program Files/Git/etc/gitconfig core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=main
+file:"C:/Users/S\303\274meyye ALPARSLAN/.gitconfig"     filter.lfs.smudge=git-lfs smudge -- %f
+file:"C:/Users/S\303\274meyye ALPARSLAN/.gitconfig"     filter.lfs.process=git-lfs filter-process
+file:"C:/Users/S\303\274meyye ALPARSLAN/.gitconfig"     filter.lfs.required=true
+file:"C:/Users/S\303\274meyye ALPARSLAN/.gitconfig"     filter.lfs.clean=git-lfs clean -- %f
+file:"C:/Users/S\303\274meyye ALPARSLAN/.gitconfig"     user.name=sumeyyealparslan
+file:"C:/Users/S\303\274meyye ALPARSLAN/.gitconfig"     user.email=sumalparslann@gmail.com
+PS C:\Users\Sümeyye ALPARSLAN\Desktop> cd .\getting-started-git\
+PS C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git> git init
+Initialized empty Git repository in C:/Users/Sümeyye ALPARSLAN/Desktop/getting-started-git/.git/
+PS C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git> cd .\.git\
+PS C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git\.git> ls
+
+
+    Directory: C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git\.git
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        15.11.2023     21:17                hooks
+d-----        15.11.2023     21:17                info
+d-----        15.11.2023     21:17                objects
+d-----        15.11.2023     21:17                refs
+-a----        15.11.2023     21:17            130 config
+-a----        15.11.2023     21:17             73 description
+-a----        15.11.2023     21:17             21 HEAD
+
+PS C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git\.git> cd ..
+PS C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git> echo "Hello, Git!" > hello.txt
+PS C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git> git add hello.txt
+PS C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git> git commit -m "Initial commit: sayin' hello"
+[main (root-commit) 1cc8e3f] Initial commit: sayin' hello
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.txt
+PS C:\Users\Sümeyye ALPARSLAN\Desktop\getting-started-git> git log
+commit 1cc8e3fb2de35129b43439f2156be7c971f41192 (HEAD -> main)
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Wed Nov 15 21:21:57 2023 +0300
+
+    Initial commit: sayin' hello
+
+
+
+
+
+
+
+
+
+
+
+CH4:
+
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop
+$ mkdir calculator
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop
+$ cd calculator/
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator
+$ git init
+Initialized empty Git repository in C:/Users/Sümeyye ALPARSLAN/Desktop/calculator/.git/
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ ls -al
+total 16
+drwxr-xr-x 1 Sümeyye ALPARSLAN 197121 0 Nov 15 21:38 ./
+drwxr-xr-x 1 Sümeyye ALPARSLAN 197121 0 Nov 15 21:37 ../
+drwxr-xr-x 1 Sümeyye ALPARSLAN 197121 0 Nov 15 21:38 .git/
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ touch README.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ ls -la
+total 16
+drwxr-xr-x 1 Sümeyye ALPARSLAN 197121 0 Nov 15 21:39 ./
+drwxr-xr-x 1 Sümeyye ALPARSLAN 197121 0 Nov 15 21:37 ../
+drwxr-xr-x 1 Sümeyye ALPARSLAN 197121 0 Nov 15 21:38 .git/
+-rw-r--r-- 1 Sümeyye ALPARSLAN 197121 0 Nov 15 21:39 README.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add README.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git commit -m "Initial commit"
+[main (root-commit) a30b783] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git log
+commit a30b7836f6be2ffba82ef7ba5f4ce3ff0dbd5032 (HEAD -> main)
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Wed Nov 15 21:42:01 2023 +0300
+
+    Initial commit
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ echo "# Calculator Project" >> README.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ echo"public class Calculator {}" >> Calculator.java
+bash: echopublic class Calculator {}: command not found
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ echo "public class Calculator {}" >> Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add README.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ On branch master
+bash: On: command not found
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ echo "This project will hold a simple implementation of a Calculatorin Java" >> README.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git commit -m "Added project title to the README"
+[main 0a2d8ba] Added project title to the README
+ 1 file changed, 1 insertion(+)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ nano Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Calculator.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ touch CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add README.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add README.md CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add*.md
+git: 'add*.md' is not a git command. See 'git --help'.
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add *.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add *.md *.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   CHANGELOG.md
+        new file:   Calculator.java
+        modified:   README.md
+
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add -A
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git commit -m "Extra information about the project, a changelog file and our future Calculator class file"
+[main 11359c7] Extra information about the project, a changelog file and our future Calculator class file
+ 3 files changed, 7 insertions(+)
+ create mode 100644 CHANGELOG.md
+ create mode 100644 Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ echo "Initial version of the Calculator project" >> CHANGELOG. md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add .
+error: open("CHANGELOG."): No such file or directory
+error: unable to index file 'CHANGELOG.'
+fatal: adding files failed
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git commit
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CHANGELOG.
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git commit --allow-empty-message --no-edit
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CHANGELOG.
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git commit -m ""
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CHANGELOG.
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git commit -am "Beautiful commit with all tracked file modifications"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CHANGELOG.
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add .
+error: open("CHANGELOG."): No such file or directory
+error: unable to index file 'CHANGELOG.'
+fatal: adding files failed
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git commit -m "Beautiful commit with all file modifications"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        CHANGELOG.
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ echo "* [ ] Finalize Git repository setup" >> TODO.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ echo "* [ ] Provide an addition method in Calculator.java" >> TODO.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ echo "TODO.md" >> .gitignore
+
+
+
+
+
+
+
+
+
+CH5:
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git branch feature/addition
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git branch
+  feature/addition
+* main
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git checkout feature/addition
+Switched to branch 'feature/addition'
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git commit -m "Extra information about the project, a changelog file and our future Calculator class file"
+On branch feature/addition
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        CHANGELOG.
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git checkout
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git branch feature/addition
+fatal: a branch named 'feature/addition' already exists
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ nano Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git add .
+error: open("CHANGELOG."): No such file or directory
+error: unable to index file 'CHANGELOG.'
+fatal: adding files failed
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git commit -m "Adding a method to Calculator.java\ class"
+On branch feature/addition
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Calculator.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        CHANGELOG.
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git log
+commit 11359c76cb3d7b5a1ce4dd34ac0dc8d8024fa14c (HEAD -> feature/addition, main)
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Wed Nov 15 22:01:33 2023 +0300
+
+    Extra information about the project, a changelog file and our future Calculator class file
+
+commit 0a2d8bab6c1daaf99475cf0c1a82c78590197892
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Wed Nov 15 21:52:15 2023 +0300
+
+    Added project title to the README
+
+commit a30b7836f6be2ffba82ef7ba5f4ce3ff0dbd5032
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Wed Nov 15 21:42:01 2023 +0300
+
+    Initial commit
+
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git checkout main
+Switched to branch 'main'
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git log
+commit 11359c76cb3d7b5a1ce4dd34ac0dc8d8024fa14c (HEAD -> main)
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Wed Nov 15 22:01:33 2023 +0300
+
+    Extra information about the project, a changelog file and our future Calculator class file
+
+commit 0a2d8bab6c1daaf99475cf0c1a82c78590197892
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Wed Nov 15 21:52:15 2023 +0300
+
+    Added project title to the README
+
+commit a30b7836f6be2ffba82ef7ba5f4ce3ff0dbd5032
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Wed Nov 15 21:42:01 2023 +0300
+
+    Initial commit
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git merge feature/addition
+Updating 11359c7..5b1bb06
+Fast-forward
+ .gitignore      | 1 +
+ CHANGELOG.md    | 2 ++
+ Calculator.java | 8 ++++----
+ 3 files changed, 7 insertions(+), 4 deletions(-)
+ create mode 100644 .gitignore
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ ls
+CHANGELOG.md  Calculator.java  README.md  TODO.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ nano Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git checkout feature/addition
+Switched to branch 'feature/addition'
+M       Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$  echo "#2020-12-11" >> CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ echo "* Added integer addition feature" >> CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$  git checkout main
+Switched to branch 'main'
+M       CHANGELOG.md
+M       Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git merge feature/addition
+Already up to date.
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git checkout feature/addition
+Switched to branch 'feature/addition'
+M       CHANGELOG.md
+M       Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ nano Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$  git add Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git commit -m "Added addition method for doubles"
+[feature/addition 1636cf5] Added addition method for doubles
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$  git checkout main
+Switched to branch 'main'
+M       CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git merge feature/addition
+Updating 5b1bb06..1636cf5
+Fast-forward
+ Calculator.java | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git checkout feature/addition
+Switched to branch 'feature/addition'
+M       CHANGELOG.md
+M       Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ nano Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$  git add Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ git commit -m "Added addition method for doubles"
+[feature/addition 1636cf5] Added addition method for doubles
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$  git checkout main
+Switched to branch 'main'
+M       CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git merge feature/addition
+Updating 5b1bb06..1636cf5
+Fast-forward
+ Calculator.java | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ nano Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git add Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git merge --continue
+fatal: There is no merge in progress (MERGE_HEAD missing).
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git checkout feature/addition
+Switched to branch 'feature/addition'
+M       CHANGELOG.md
+M       Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$ nano Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/addition)
+$  git checkout main
+Switched to branch 'main'
+M       CHANGELOG.md
+M       Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$  git merge feature/addition
+Already up to date.
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git merge --abort
+fatal: There is no merge to abort (MERGE_HEAD missing).
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git checkout -b feature/subtraction
+Switched to a new branch 'feature/subtraction'
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$ nano Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$  git add Calculator.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$  git commit -m "Added subtraction method"
+[feature/subtraction ca53772] Added subtraction method
+ 1 file changed, 11 insertions(+)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$ git log -1
+commit ca537726d00ea1f774c6a9096084489110b1d2fc (HEAD -> feature/subtraction)
+Author: sumeyyealparslan <sumalparslann@gmail.com>
+Date:   Mon Jan 15 23:22:34 2024 +0300
+
+    Added subtraction method
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$  git checkout main
+Switched to branch 'main'
+M       CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ touch Application.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ nano Application.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git add Application.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git commit -m "Added Application to call the Calculator"
+[main bcffc64] Added Application to call the Calculator
+ 1 file changed, 6 insertions(+)
+ create mode 100644 Application.java
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (main)
+$ git checkout feature/subtraction
+Switched to branch 'feature/subtraction'
+M       CHANGELOG.md
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$ git add .
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$ git commit -m "commited"
+[feature/subtraction 2bb8de2] commited
+ 1 file changed, 2 insertions(+)
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$ git rebase main
+Successfully rebased and updated refs/heads/feature/subtraction.
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$ git branch -d feature/soon-to-be-discarded
+error: branch 'feature/soon-to-be-discarded' not found.
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$ git branch -d feature/addition
+Deleted branch feature/addition (was 1636cf5).
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (feature/subtraction)
+$ git checkout -b newbrancg
+Switched to a new branch 'newbrancg'
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (newbrancg)
+$ git branch -m newbranch
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (newbranch)
+$ git branch
+  feature/subtraction
+  main
+* newbranch
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (newbranch)
+$ git branch anotherbranch
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (newbranch)
+$ git branch -m anotherbranch
+fatal: a branch named 'anotherbranch' already exists
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (newbranch)
+$ git branch -M anotherbranch
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (anotherbranch)
+$ git branch
+* anotherbranch
+  feature/subtraction
+  main
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (anotherbranch)
+$ git log --oneline
+5fb7d8b (HEAD -> anotherbranch, feature/subtraction) commited
+84625ad Added subtraction method
+bcffc64 (main) Added Application to call the Calculator
+1636cf5 Added addition method for doubles
+5b1bb06 Adding a method to Calculator.java class
+57cf4c2 Added addition method for doubles
+11359c7 Extra information about the project, a changelog file and our future Calculator class file
+0a2d8ba Added project title to the README
+a30b783 Initial commit
+
+Sümeyye ALPARSLAN@DESKTOP-QU7J539 MINGW64 ~/Desktop/calculator (anotherbranch)
+$ echo "# calculator" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sumeyyealparslan/calculator.git
+git push -u origin main
+Reinitialized existing Git repository in C:/Users/Sümeyye ALPARSLAN/Desktop/calculator/.git/
+[anotherbranch 93ebaaa] first commit
+ 1 file changed, 1 insertion(+)
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (27/27), done.
+Writing objects: 100% (33/33), 3.10 KiB | 1.55 MiB/s, done.
+Total 33 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/sumeyyealparslan/calculator.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
